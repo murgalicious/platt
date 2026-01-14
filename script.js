@@ -52,3 +52,4 @@ spans.forEach((span) =>
     span.classList.remove("animated", "rubberBand");
   })
 );
+
