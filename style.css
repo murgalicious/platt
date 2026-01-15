@@ -738,3 +738,67 @@ body {
   filter: drop-shadow(0 0 6px rgba(0,0,0,0.8));
 }
 
+/* Hero-video bakgrund */
+.intro video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;           /* alltid fyll bredd */
+  height: 100vh;          /* alltid fyll höjd */
+  object-fit: cover;      /* beskär med zoom istället för att sträcka */
+  transform: translate(-50%, -50%) scale(1.2); /* zoom in lite */
+  z-index: -1;            /* bakom texten */
+}
+
+/* För mobilen kan du öka zoomen om det behövs */
+@media (max-width: 768px) {
+  .intro video {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+/* Desktop: inline, samma rad */
+.auto-typed-wrapper {
+  display: inline; 
+  margin-left: 0.5rem; /* lite mellanrum efter 'Vi hjälper er' */
+}
+
+/* Mobil: alltid på egen rad */
+@media (max-width: 768px) {
+  .auto-typed-wrapper {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem; /* lite spacing ovanför */
+  }
+}
+.font_intro {
+  line-height: 1.2; /* baslinjeavstånd för texten */
+}
+
+/* Varje rad i H1 som är wrap: margin-bottom */
+.font_intro br {
+  content: "";
+  display: block;
+  margin-bottom: 1rem; /* ökar spacing efter varje br */
+}
+
+/* Vi hjälper er */
+.font_intro .vi-hjalper {
+  display: block;       /* säkerställ block på alla skärmar */
+  margin-top: 1rem;     /* extra spacing ovanför */
+  margin-bottom: 0.5rem; /* spacing till JS-text */
+}
+
+/* JS-text wrapper */
+.auto-typed-wrapper {
+  display: inline; /* desktop: inline */
+  margin-left: 0rem; 
+}
+
+/* Mobil: JS-text under 'Vi hjälper er' */
+@media (max-width: 768px) {
+  .auto-typed-wrapper {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
