@@ -1,2 +1,5 @@
 /robots.txt
   Content-Signal:
+
+/*
+  Content-Signal: search=yes,ai-train=no
