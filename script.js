@@ -1,30 +1,16 @@
-//Scroll kembali keatas
-let mybutton = document.getElementById("myBtn");
-
-window.onscroll = function () {
-  scrollFunction();
-};
-function scrollFunction() {
-  if (document.documentElement.scrollTop > 300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
 function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-//Ketik
+//Auto-type
 var typed = new Typed(".auto-typed", {
-  strings: ["gärna", "professionellt", "snabbt"],
+  strings: ["gärna.", "professionellt.", "snabbt."],
   typeSpeed: 100,
-  backSpeed: 100,
+  backSpeed: 10,
   loop: true,
 });
 
-//Scroll muncul satu persatu
+//Scroll 1by1
 window.addEventListener("scroll", muncul);
 function muncul() {
   let elements = document.querySelectorAll(".naik");
